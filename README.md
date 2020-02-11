@@ -7,14 +7,14 @@ make
 # Run
 
 ```
-./program search-string my-path [my-path-two] [my-path-three] ...
+./build/c11-threads-file-searcher search-string my-path [my-path-two] [my-path-three] ...
 ```
 
 # Test
 
 ```
-./program search-string hello test/a
-./program search-string hello test/b
+./build/c11-threads-file-searcher search-string hello test/a
+./build/c11-threads-file-searcher search-string hello test/b
 ```
 
 should yield
