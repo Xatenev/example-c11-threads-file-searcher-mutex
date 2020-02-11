@@ -27,4 +27,4 @@ clean:
 	rm -f $(OBJ_FILES) $(NAME)
 
 run: 
-	./$(OBJ_DIR)/$(NAME)
+	./$(OBJ_DIR)/$(NAME) ${args}
