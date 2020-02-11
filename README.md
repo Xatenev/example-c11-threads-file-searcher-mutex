@@ -13,8 +13,9 @@ make
 # Test
 
 ```
-./build/c11-threads-file-searcher hello test/a
-./build/c11-threads-file-searcher hello test/b
+./build/c11-threads-file-searcher hello test
+or 
+./build/c11-threads-file-searcher hello test/a test/b
 ```
 
 should yield
