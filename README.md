@@ -7,15 +7,15 @@ make
 # Run
 
 ```
-./build/c11-threads-file-searcher search-string my-path [my-path-two] [my-path-three] ...
+./build/xfs search-string my-path [my-path-two] [my-path-three] ...
 ```
 
 # Test
 
 ```
-./build/c11-threads-file-searcher hello test
+./build/xfs hello test
 or 
-./build/c11-threads-file-searcher hello test/a test/b
+./build/xfs hello test/a test/b
 ```
 
 should yield

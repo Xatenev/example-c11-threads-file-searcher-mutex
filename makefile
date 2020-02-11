@@ -1,4 +1,4 @@
-NAME=c11-threads-file-searcher
+NAME=xfs
 
 CC=gcc
 CFLAGS=-Wall
