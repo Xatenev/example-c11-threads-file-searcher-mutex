@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
         return -1;
     }
 
+    mtx_init(&result_list_lock, mtx_plain);
     thrd_t threads[argc - 2];
 
     for (int i = 2; i < argc; i++)
@@ -33,6 +34,7 @@ int main(int argc, char *argv[])
         struct thread_arg *ta = malloc(sizeof *ta);
         ta->id = i - 2;
         ta->path = argv[i];
+        ta->search = argv[1];
         thrd_create(&threads[i - 2], worker_start, ta);
     }
 
@@ -48,7 +50,19 @@ int main(int argc, char *argv[])
         }
     }
 
-    printf("%s", found[0]);
+    mtx_destroy(&result_list_lock);
+
+    if (result_list_index == 0)
+    {
+        fprintf(stdout, "No results found\n");
+    }
+    else
+    {
+        for (int i = 0; i < result_list_index; i++)
+        {
+            fprintf(stdout, "%s\n", result_list[i]);
+        }
+    }
 
     return 0;
 }
