@@ -1,6 +1,6 @@
 # C11 threads and mutexes
 
-Illustrating the use of C11 threads and mutexes by recursively searching a directory for filenames.
+Illustrating the use of C11 threads and mutexes by recursively searching a directory for filenames for educational purposes on Libera IRC channel #c.
 
 ## Compile
 
